@@ -89,15 +89,21 @@ class AddressBook {
             ", phoneNumber = " + this.phoneNumber + ", email = " + this.email;
     }
 }
-
+//Add contact
 let contact1 = new AddressBook("Sinky", "Verma", "New shivpuri", "Ludhiana", "Punjab", "141141", "7412589632", "sinky@gmail.com")
 let addressBookArray = new Array();
 addressBookArray.push(contact1);
 addressBookArray[1] = new AddressBook("Sandy", "Kumar", "Bypass", "Patna", "Bihar", "112222", "7894561234", "Sandy@gmail.com");
-
 console.log(addressBookArray);
 
+//update contact
 let index = addressBookArray.findIndex((obj => obj.firstName == "Sandy"));
 console.log("Before Update : " + addressBookArray[index]);
 addressBookArray[index].state = "UP";
 console.log("After Update : " + addressBookArray[index]);
+
+//Delete contact
+index = addressBookArray.findIndex((obj => obj.firstName == "Sinky"));
+addressBookArray.pop(index);
+console.log("After Deletion");
+console.log(addressBookArray);
