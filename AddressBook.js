@@ -93,6 +93,7 @@ class AddressBook {
 let contact1 = new AddressBook("Sinky", "Verma", "New shivpuri", "Ludhiana", "Punjab", "141141", "7412589632", "sinky@gmail.com")
 let addressBookArray = new Array();
 addressBookArray.push(contact1);
+console.log(addressBookArray);
 addressBookArray[1] = new AddressBook("Sandy", "Kumar", "Bypass", "Patna", "Bihar", "112222", "7894561234", "Sandy@gmail.com");
 console.log(addressBookArray);
 
@@ -107,3 +108,7 @@ index = addressBookArray.findIndex((obj => obj.firstName == "Sinky"));
 addressBookArray.pop(index);
 console.log("After Deletion");
 console.log(addressBookArray);
+
+//Count contact
+let count = addressBookArray.length;
+console.log("Total contact in addressbook: " + count);
