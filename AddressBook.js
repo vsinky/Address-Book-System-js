@@ -114,7 +114,7 @@ let count = addressBookArray.length;
 console.log("Total contact in addressbook: " + count);
 
 // check for Duplicate Entry
-let contact2 = new AddressBook("Sinky", "Verma", "New shivpuri", "Ludhiana", "Punjab", "141141", "7412589632", "sinky@gmail.com");
+let contact2 = new AddressBook("Sonu", "Kumar", "New", "Gaya", "Bihar", "80132", "9998627442", "sonu@gmail.com");
 if (addressBookArray.findIndex(contact => contact.firstName == contact2.firstName) == -1) {
     addressBookArray.push(contact2);
 } else {
@@ -122,6 +122,12 @@ if (addressBookArray.findIndex(contact => contact.firstName == contact2.firstNam
 }
 console.log(addressBookArray);
 addressBookArray.push(contact2)
-let cityOrState = addressBookArray.filter(contact => (contact.state == "Punjab") || (contact.city == "Punjab"));
-console.log("Contacts from City Ludhiana or State Punjab are : ");
-console.log(cityOrState);
+
+//search and veiw the contact
+let cityOrState = addressBookArray.filter(contact => (contact.state == "Bihar") || (contact.city == "Gaya"));
+if (cityOrState.length == 0) {
+    console.log("contact not found");
+} else {
+    console.log("Contacts from City Gaya or State Bihar are : ");
+    console.log(cityOrState);
+}
