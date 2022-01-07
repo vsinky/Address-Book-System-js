@@ -112,3 +112,12 @@ console.log(addressBookArray);
 //Count contact
 let count = addressBookArray.length;
 console.log("Total contact in addressbook: " + count);
+
+// check for Duplicate Entry
+let contact3 = new AddressBook("Sinky", "Verma", "New shivpuri", "Ludhiana", "Punjab", "141141", "7412589632", "sinky@gmail.com");
+if (addressBookArray.findIndex(contact => contact.firstName == contact3.firstName) == -1) {
+    addressBookArray.push(contact3);
+} else {
+    console.log("Duplicate Entry");
+}
+console.log(addressBookArray);
